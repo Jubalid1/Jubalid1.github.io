@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <script type="importmap">
+        {
+          "imports": {
+            "@material/web/": "https://esm.run/@material/web/"
+          }
+        }
+      </script>
+      <script type="module">
+        import '@material/web/all.js';
+        import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+    
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+      </script>
+</head>
+<body>
+    <div class="container">   
+        <md-text-button id="num">0</md-text-button>
+        <md-filled-text-field id="input"></md-filled-text-field>
+        <md-outlined-button id="button">Add</md-outlined-button>
+        <md-outlined-button id="button2">Subtract</md-outlined-button>
+    </div>
+    <style>
+        md-filled-button{
+            
+        }
+        md-filled-text-field{
+            text-size-adjust: 50;
+        }
+    </style>
+    <script src="index.js"></script>
+</body>
+</html>
